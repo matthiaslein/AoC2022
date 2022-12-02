@@ -25,7 +25,7 @@ def count_calories(list, num) -> int:
 def create_calorie_list(elves) -> list:
     calorie_list = []
     for number, elf in enumerate(elves):
-        calorie_list.append(count_calories(elves,number))
+        calorie_list.append(count_calories(elves, number))
     return calorie_list
 
 
@@ -36,7 +36,6 @@ if __name__ == '__main__':
     data = data_prep(raw_input)
     elves = create_list_of_elves(data)
     calories = create_calorie_list(elves)
-    print(sorted(calories))
 
-    # print(f'Part 1: = {part_one(data)}')
-    # print(f'Part 2: = {part_two(data)}')
+    print(f'Part 1: = {sorted(calories)[-1]}')
+    print(f'Part 2: = {sorted(calories)[-3:]}')
